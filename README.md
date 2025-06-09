@@ -1,1 +1,1 @@
-# Art-of-Investigations
+# Art of Investigations
