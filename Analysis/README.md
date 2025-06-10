@@ -42,3 +42,15 @@ Here are some possible answers to those questions above:
   - Last activity reported back in 2023-05-22, likely not related to Cobalt Struke anymore
 - Reviewed process creations for +/- 5 minutes of the alert
   - No suspicious command line arguments or processes that warrant additional investigation
+
+Conclusion: Should we be worried? No. Is it possible to be wrong? Yes, but because of the questions we asked and investigation we did, we have proof or evidence that supports the opposite. 
+
+Do keep in mind that your investigation is heavily impacted depending on the data sources that are available to you. 
+
+If you are brand new to the SOC and just starting out, it is very easy to get lost in all the alerts and events that are happening and each alert that you attempt to triage and perform analysis on. You might not know what to do, and that's perfectly okay. If your back was against the wall and you had to make a decision on if an alert was benign or malicious, how would you make that decision? 
+
+One common method I like to use is called prevalence, and it may not apply everywhere but it is something for you to try and fall back on when doing your analysis. Prevalence is use to determine how common something is. For example, imagine you are investigating an alert that had AnyDesk on a machine named IT-01. Your objective should be to determine if we should be worried or not, aka is this benign activity or malicious activity. 
+
+Some of the questions you can ask are how common is the file AnyDesk.exe? Do other hosts have this file? Did any of them execute this file? For example if you identified that all 30 IT computers have AnyDesk, the prevalence would be common and you can lean towards it being benign. But if only 1 of 250 computer have AnyDesk, the prevalence is unique and you can lean towards it being malicious. 
+
+As a side note, there are multiple different conclusions in every SOC environment, but for the sake of this example, we only have two outcomes, which benign or malicious. And as a unique example, if an adversary deployed a custom worm to your environment, you won't find any security vendors flagging the file hash as malicious and worms spread themselves, so many computers would have it, making the prevalence common. This is why you shouldn't solely rely on prevalence but use it as a method, along with researching surrounding events and looking at the bigger picture to help you draw your conclusion.
