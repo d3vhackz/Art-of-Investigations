@@ -1,11 +1,63 @@
 # What Makes a Great Investigation
 
-Not all investigations are good. It can be a cause of many factors like a lack time, experience, or awareness. Rregardless of the reason, you should always have one objective in mind: **Understand exactly what happened, backed with evidence and conclude if the activity was malicious or benign.** The reality is analysts only understand 70-80% of the activity due to lack of data source and/or the analyst expertise and conclude "most likely this is what happened". You should always have proof of something happening. For example, if there was a brute force attack, take a screenshot of what account was attacked and any failed logon attempts that you can find. In short, if you can't back up your statement with evidence, don't write it down.
+A great investigation doesn’t happen by accident—it’s the result of deliberate analysis, effective communication, and evidence-driven conclusions. Not all investigations are equally valuable. Common pitfalls include lack of time, limited experience, poor data visibility, or failure to follow a structured process. Despite these challenges, every investigation should aim for one clear objective:
 
-Things to consider:
-- Build a story that clearly atates what happened along with supporting evidence
-  - Screenshots, Timeline, Logs
- - Provide details within the investigation that are relevant to the alert and the actions performed
- - Answers questions that the recipient might have
- - Provides recommendations and next steps
- - Conclusion
+> **Understand exactly what happened, back it with solid evidence, and determine whether the activity was malicious or benign.**
+
+---
+
+## The Reality of Uncertainty
+
+In most real-world cases, analysts rarely have full visibility. Due to missing telemetry or limited analyst expertise, it's common to reach only a **70–80% level of confidence**. As a result, many conclusions will be framed as:
+
+> *“Most likely, this is what happened…”*
+
+And that’s okay—**as long as your claims are grounded in observable data.** If you can’t prove something, **don’t include it in your report.** Always strive to capture artifacts such as:
+
+- Screenshots of relevant evidence  
+- Logs confirming activity  
+- Timestamps tied to key actions  
+- Specific accounts or systems involved  
+
+---
+
+## Key Components of a Great Investigation
+
+### Narrative Clarity
+- Build a compelling, logical story around what happened.  
+- Create a timeline that maps out the sequence of events.  
+- Use visuals (screenshots, logs, etc.) to reinforce your findings.
+
+### Relevance and Focus
+- Include only details directly tied to the alert or suspicious activity.  
+- Eliminate unnecessary technical noise or speculation.
+
+### Anticipate Questions
+Ask yourself:
+- What happened?  
+- When and where did it happen?  
+- How was it detected?  
+- What systems or users were involved?  
+- What was the impact?
+
+### Actionable Recommendations
+- Suggest next steps (e.g., block an IP, reset a password, tune a detection rule).  
+- Tailor advice based on the type and scope of activity.
+
+### Clear Conclusion
+- Determine whether the activity was **malicious**, **benign**, or **inconclusive**.  
+- Include your **confidence level** and **justify it with evidence**.
+
+---
+
+## Quick Checklist for Every Investigation
+
+- [ ] Have I clearly told the story of what happened?  
+- [ ] Is each claim backed by logs, screenshots, or data?  
+- [ ] Have I answered likely questions from other analysts or stakeholders?  
+- [ ] Did I provide actionable next steps?  
+- [ ] Is my conclusion clear, justified, and supported by evidence?
+
+---
+
+> If it’s not backed by data, don’t write it down.
