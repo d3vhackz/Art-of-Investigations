@@ -34,3 +34,11 @@ Moving onto, should we be worried? What are the events that must occur to have u
 - Did any other destination IPs get hit with the same source IP?
 - Did those IPs send an ACK back to the external IP?
 - What were the process creations for this destination host during this time? 
+
+Here are some possible answers to those questions above:
+- Check networking logs
+  - No ACK flags reported and no other destination IPs were seen
+- Performed additional OSINT on source IP
+  - Last activity reported back in 2023-05-22, likely not related to Cobalt Struke anymore
+- Reviewed process creations for +/- 5 minutes of the alert
+  - No suspicious command line arguments or processes that warrant additional investigation
